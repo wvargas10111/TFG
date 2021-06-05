@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
     <title>TFG2</title>
 </head>
 
@@ -15,7 +17,7 @@
     <nav class="navbar">
 
         <div class="navbar_container">
-            <a href="#home" id="navbar_logo">"EMPRESA QUE HACE COSAS"</a>
+            <a href="#home" id="navbar_logo">Coffee mug</a>
             <div class="navbar_toggle" id="mobile-menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -28,18 +30,18 @@
 
             <ul class="navbar_menu">
                 <li class="navbar_item">
-                    <a href="#home" class="navbar_links" id="home-page">Eres</a>
+                    <a href="#home" class="navbar_links" id="inicio">Inicio</a>
                 </li>
                 <li class="navbar_item">
-                    <a href="#home" class="navbar_links" id="home-page">Un</a>
+                    <a href="#about" class="navbar_links" id="nosotros">Nosotros</a>
                 </li>
                 <li class="navbar_item">
-                    <a href="#home" class="navbar_links" id="home-page">Parguela</a>
-                </li>
-                <li class="navbar_btn">
-                    <a href="#send" class="button" id="send">Eres la 8==D</a>
+                    <a href="#oprojects" class="navbar_links" id="projectos">Projectos</a>
                 </li>
 
+                <li class="navbar_item">
+                    <a href="#contact" class="navbar_links" id="contacta">Contactanos</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -48,9 +50,9 @@
 
     <div class="header" id="home">
         <div class="header_container">
+            <img src="img/cmw.png" alt="logo">
             <h1 class="header_heading">Te hacemos llegar <span>más lejos</span></h1>
-            <p class="header_description">Creamos tu página web profesional y personalizada</p>
-            <button class="main_btn"><a href="#">Explore</a></button>
+            <p class="header_description">Diseño y Desarrollo de Páginas Web Profesionales</p>
         </div>
     </div>
 
@@ -59,61 +61,114 @@
     <div class="main" id="about">
         <div class="main_container">
             <div class="main_img_container">
-                <div class="main_img_card"><i class="fas fa-window-restore"></i></div>
+                <div class="main_img_card">
+                    <i class="fas fa-window-restore"></i>
+                </div>
             </div>
             <div class="main_content">
                 <h1>¿Que hacemos?</h1>
-                <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
-                <p>Lorem ipsum dolor, sit amet consectetur, adipisicing elit. At, consequuntur.</p>
-                <button class="main_btn"><a href="#">Explore</a></button>
+                <p>No es fácil encontrar una buena agencia de diseño web. La oferta ha aumentado bastante durante los últimos años, debido básicamente a la necesidad de contar con presencia online. Además, el entorno digital se mueve rápidamente y muchos
+                    son los que necesitan actualizaciones en sus portales o incluso proyectos de desarrollo web desde cero.</p>
+                <p>El diseño web no es solamente la creación de páginas web atrayentes para empresas. Detrás de lo que ve el usuario, hay mucho trabajo y una estructura con un orden y llena de elementos que interactúan entre sí, para facilitarle la experiencia
+                    y cumplir con los objetivos que se han propuesto por el.</p>
             </div>
         </div>
     </div>
     <p></p>
     <!-- Projects Section -->
-    <div class="services" id="services">
+    <div class="projects" id="oprojects">
         <h1>Nuestros Projectos</h1>
-        <div class="services_wrapper">
-            <div class="services_card">
+        <div class="projects_wrapper">
+            <div class="projects_card">
                 <h2>Pagina simple</h2>
                 <p>Lorem ipsum dolor sit amet.</p>
-                <div class="services_btn"><button>Ir al projecto</button></div>
+                <div class="projects_btn"><button>Ir al projecto</button></div>
             </div>
-            <div class="services_card">
+            <div class="projects_card">
                 <h2>Tienda de zapas</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-                <div class="services_btn"><button>Ir al projecto</button></div>
+                <div class="projects_btn"><button>Ir al projecto</button></div>
             </div>
-            <div class="services_card">
+            <div class="projects_card">
                 <h2>Lo de las APIS</h2>
                 <p>Lorem, ipsum dolor.</p>
-                <div class="services_btn"><button>Ir al projecto</button></div>
+                <div class="projects_btn"><button>Ir al projecto</button></div>
             </div>
-            <div class="services_card">
+            <div class="projects_card">
                 <h2>Agencia de viajes</h2>
                 <p>Lorem ipsum dolor sit amet.</p>
-                <div class="services_btn"><button>Ir al projecto</button></div>
+                <div class="projects_btn"><button>Ir al projecto</button></div>
             </div>
         </div>
     </div>
 
     <!-- Contact Us Section -->
-    <div class="main" id="sign-up">
+    <div class="main" id="contact">
         <div class="main_container">
             <div class="main_content">
                 <h1>Contacta con nosotros</h1>
                 <h2>Envianos tu propuesta</h2>
-                <p>Lorem ipsum dolor sit amet consectetur.</p>
+                <p>En Coffee Mug valoramos el trato directo con cada cliente, esto nos dará una mejor perspectiva y hará unico cada proyecto. ¿ Nos lo cuentas con una taza de café ?</p>
                 <button class="main_btn"><a href="#">ir</a></button>
             </div>
             <div class="main_img_container">
                 <div class="main_img_card" id="card-2">
-                    <i class="far fa-file-code"></i>
+                    <i class="fas fa-mug-hot"></i>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Footer Section -->
+
+    <div class="footer_container">
+        <!-- <div class="footer_links">
+            <div class="footer_link-wrapper">
+                <div class="footer_link-items">
+                    <h2>About Us</h2>
+                    <a href="/sign_up">How it works</a> <a href="/">Testimonials</a>
+                    <a href="/">Careers</a> <a href="/">Terms of Service</a>
+                </div>
+                <div class="footer_link-items">
+                    <h2>Contact Us</h2>
+                    <a href="/">Contact</a> <a href="/">Support</a>
+                    <a href="/">Destinations</a>
+                </div>
+            </div>
+            <div class="footer_link-wrapper">
+                <div class="footer_link-items">
+                    <h2>Videos</h2>
+                    <a href="/">Submit Video</a> <a href="/">Ambassadors</a>
+                    <a href="/">Agency</a>
+                </div>
+                <div class="footer_link-items">
+                    <h2>Social Media</h2>
+                    <a href="/">Instagram</a> <a href="/">Facebook</a>
+                    <a href="/">Youtube</a> <a href="/">Twitter</a>
+                </div>
+            </div>
+        </div> -->
+        <section class="social_media">
+            <div class="social_media-wrap">
+
+                <img src="img/cmw.png" alt="">
+
+                <p class="website_rights">© COFFEE MUG 2021. All rights reserved</p>
+                <div class="social_icons">
+                    <a href="/" class="social_icon-link" target="_blank"><i class="fab fa-facebook"></i
+              ></a>
+                    <a href="/" class="social_icon-link"><i class="fab fa-instagram"></i
+              ></a>
+                    <a href="/" class="social_icon-link"><i class="fab fa-youtube"></i
+              ></a>
+                    <a href="/" class="social_icon-link"><i class="fab fa-linkedin"></i
+              ></a>
+                    <a href="/" class="social_icon-link"><i class="fab fa-twitter"></i
+              ></a>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <script src="js/app.js"></script>
 </body>
