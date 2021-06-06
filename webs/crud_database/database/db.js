@@ -1,3 +1,7 @@
+/* Este archivo contiene lo relacionado con la base de datos
+ */
+
+//Constante para establer una conexión con la base de datos
 const mysql = require('mysql');
 
 const conexion = mysql.createConnection({
@@ -9,6 +13,7 @@ const conexion = mysql.createConnection({
 
 });
 
+//Estabecemos la conexión con la base de datos
 conexion.connect((error)=>{
     if (error) {
       console.error('El error de conexión es: ' + error);

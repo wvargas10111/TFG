@@ -1,3 +1,6 @@
+/* Este archivo configura nuestro servidor
+ */
+
 //Constantes para uso de express
 const express = require('express');
 const app = express();
@@ -13,7 +16,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')))
 
 app.use('/', require('./router'));
-
+//Establecemos el puerto 5000 como acceso local para la salida de datos
 app.listen(5000, ()=>{
-    console.log('SERVER corriendo en http://localhost:5000');
+    console.log('SERVER corriendo en http://localhost:5000');//Por consola mostramos este mensaje para verificar la conexión
 })

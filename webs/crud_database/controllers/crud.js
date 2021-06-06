@@ -1,7 +1,10 @@
+/* Este archivo almacena los controladores necesarios para la obtención de datos
+ */
+
 //Invocamos a la conexion de la DB
 const conexion = require('../database/db');
 
-//Guardar un registro
+//Guardar un registro dentro de la base de datos
 exports.save = (req, res)=>{
     const user = req.body.user;
     const rol = req.body.rol;
@@ -15,7 +18,7 @@ exports.save = (req, res)=>{
 });
 };
 
-//Actualizar un registro
+//Actualizar un registro dentro de la base de datos
 exports.update = (req, res)=>{
     const id = req.body.id;
     const user = req.body.user;

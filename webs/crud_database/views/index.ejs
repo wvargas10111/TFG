@@ -1,3 +1,5 @@
+<!-- Página index donde encontramos por pantalla lo guardado en la base de datos con las diferentes opciones que aportamos
+ -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'> <!-- Uso de los boxicons -->
@@ -42,7 +44,7 @@
     </nav>
     <br><br>
     <div eblclass="container">
-       <!--  Boton Boxicons -->
+        <!--  Boton Boxicons -->
         <a href="/create" class="btn btn-success mt-4"><i class='bx bxs-plus-circle bx-md'></i></a>
         <table class="table table-bordered table-striped text-center mt-4">
             <thead>
@@ -54,6 +56,8 @@
                 </tr>
             </thead>
             <tbody>
+                <!-- Establecemos un forEach para mostrar por pantalla en la tabla la salida de los datos de la base de datos.
+            Usamos lenguaje que reconocen las plantillas .ejs-->
                 <% results.forEach((user)=>{ %>
                     <tr>
                         <td>
@@ -66,17 +70,18 @@
                             <%= user.rol %>
                         </td>
                         <td>
-                            <a href="/edit/<%= user.id %>" class="btn btn-outline-info"><i class='bx bxs-edit'></i></a>
-                            <a href="/delete/<%= user.id %>" class="btn btn-outline-danger" onclick="confirmacion()"><i class='bx bxs-trash-alt'></i></a>
+                            <a href="/edit/<%= user.id %>" class="btn btn-outline-info"><i class='bx bxs-edit'></i></a> <!-- Botón que permite ir a editar una reserva -->
+                            <a href="/delete/<%= user.id %>" class="btn btn-outline-danger" onclick="confirmacion()"><i 
+                                    class='bx bxs-trash-alt'></i></a> <!-- Botón que permite realizar una cancelación de una reserva -->
                         </td>
                     </tr>
-                <% }) %>
+                    <% }) %>
             </tbody>
         </table>
     </div>
-    <script>
+    <script> //Función con muestar una alerta al realizar una cancelación
         function confirmacion() {
-          alert("Cancelación realizada");
+            alert("Cancelación realizada");
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"

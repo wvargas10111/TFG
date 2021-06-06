@@ -1,9 +1,12 @@
+/* Este archivo se encarga de crear las rutas y constantes necesarias para navegar a través de las diferentes paginas creadas y ver su contenido
+ */
+
+//Constantes necesarias para el correcto funcionamiento de express, tanto para crear las rutas como para la base de datos
 const express = require('express');
 const router = express.Router();
-
 const conexion = require('./database/db');
 
-
+//Ruta que permite mostrar todos los datos guardados en la base de datos
 router.get('/', (req, res) => {
     
     conexion.query('SELECT * FROM users',(error, results)=>{
@@ -14,11 +17,10 @@ router.get('/', (req, res) => {
         }   
     })
 })
-
+//Exportamos la constante router para su uso
 module.exports = router;
 
 //Rutas para acceder a las diferentes plantillas
-
 router.get('/inicio', (req,res)=>{
     res.render('inicio');
 })

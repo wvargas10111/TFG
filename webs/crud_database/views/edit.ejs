@@ -1,3 +1,5 @@
+<!-- Esta página nos permite editar una reserva
+ -->
 <!DOCTYPE html>
 
 <html lang="es">
@@ -57,6 +59,7 @@
                         <div class="mb-3">
                             <label for="rol" class="form-label">Reserva</label>
                             <select id="rol" name="rol" class="form-select" tabindex="2">
+                                <!--A través de .ejs obtenemos el valor antiguo elegido y lo cambiamos por uno nuevo-->
                                 <option <%=user.rol=='Brasil' ? "selected" : '' %> value="Brasil">Brasil</option>
                                 <option <%=user.rol=='Perú' ? "selected" : '' %> value="Perú">Perú
                                 </option>

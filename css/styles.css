@@ -419,8 +419,10 @@
         width: 250px;
         height: 250px;
     }
-    .fa-window-restore,
-    .fa-users {
+    .fa-window-restore {
+        font-size: 8rem;
+    }
+    .fa-mug-hot {
         font-size: 8rem;
     }
     .main_content h1 {
@@ -549,8 +551,7 @@
     cursor: pointer;
 }
 
-.fa-mug-hot,
-.fa-users {
+.fa-mug-hot {
     font-size: 20rem;
 }
 
@@ -572,9 +573,8 @@
     }
 }
 
-@media screen and (max-width: 360px) {
-    .fa-mug-hot,
-    .fa-users {
+@media screen and (max-width: 479px) {
+    .fa-mug-hot {
         font-size: 8rem;
     }
     #navbar_logo {
