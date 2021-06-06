@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+
+    <title>Demo JokeAPI</title>
+
+    <link rel="icon" type="image/png" href="../jokes64.png" />
+
+</head>
+
+<body>
+
+    <!--NAVBAR-->
+        
+        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="index.html" > <img src="../avatar.png"  class="d-block w-100" alt="..."> </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="cockTailsIndex.html">COCKTAILS</a>
+                </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">DOGS</a>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+                    <img src="../jokes64.png"  class="d-block w-100" alt="...">
+                </span>
+            </div>
+        </nav>
+        
+        
+
+    <br><br>
+    <div class="container">
+        <h1>Demo JokeAPI</h1>
+        <br>
+        <p>Create your own personalized joke, enter the characteristics you want your joke to have and click on
+            <b>Generate joke</b></p>
+
+        <div id="formulario">
+            <br>
+            <div class="row">
+                
+                <!--Aquí se elige la categoría del chiste-->
+                <div class="col-md-4 categoria">
+                    <label class="titulo"><b>Categories</b></label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Any" id="any">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Any
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Programming">
+                        <label class="form-check-label" for="defaultCheck2">
+                            Programming
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Miscellaneous">
+                        <label class="form-check-label" for="defaultCheck2">
+                            Miscellaneous
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Dark">
+                        <label class="form-check-label" for="defaultCheck2">
+                            Dark
+                        </label>
+                    </div>
+                </div>
+                
+                <!--Aquí se elige el flag del chiste-->
+                <div class="col-md-4 flag">
+                    <label class="titulo"><b>Flags(Optional)</b></label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="nsfw">
+                        <label class="form-check-label" for="defaultCheck1">
+                            NSFW
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="religious">
+                        <label class="form-check-label" for="defaultCheck2">
+                            Religious
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="political">
+                        <label class="form-check-label" for="defaultCheck2">
+                            Political
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="racist">
+                        <label class="form-check-label" for="defaultCheck2">
+                            Racist
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="sexist">
+                        <label class="form-check-label" for="defaultCheck2">
+                            Sexist
+                        </label>
+                    </div>
+                </div>
+                <!--Aquí se elige si la broma es sencilla o con dos partes-->
+                <div class="col-md-4 tipo">
+                    <label class="titulo"><b>Joke Type</b></label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="single">
+                        <label class="form-check-label" for="defaultCheck1">
+                            Single
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="twopart">
+                        <label class="form-check-label" for="defaultCheck2">
+                            Two part
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+        <br>
+        <button type="button" class="btn btn-secondary btn-lg btn-block">Generate joke</button>
+        <br>
+        <!--Aquí pondremos el chiste generador-->
+        <div id="chiste">
+
+        </div>
+    </div>
+
+
+    <br><br><br><br><br><br>
+    <!-- Footer -->
+    <footer>
+
+        <p>Copyright © 2020: Chacales Company </p>
+
+    </footer>
+    <!-- Footer -->
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+    
+    <!-- Our JavaScript -->
+    <script src="../js/script.js"></script>
+
+</body>
+
+</html>

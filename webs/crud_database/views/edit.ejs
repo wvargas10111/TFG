@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Editar Reservar</title>
+
+</head>
+
+<body>
+    <!--   Código para la barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-success navbar-dark fixed-top">
+        <!-- Favicon-->
+        <a class="navbar-brand" href="/">Green Leaf</a>
+        <img src="/image/hoja.png" alt="logo" style="width:40px;">
+        <!-- Botón de colapso de menú -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="Tienda.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="Conocenos.html">Conócenos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="incidencias.html">Incidencias</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="/todosdestino">Destinos</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <br><br><br>
+    <% if (user) { %>
+        <div class="container mt-4">
+            <div class="card border-secondary">
+                <div class="card-header">Editar Reserva</div>
+                <div class="card-body">
+                    <form action="/update" method="POST">
+                        <input id="id" name="id" value="<%= user.id %>" hidden>
+                        <div class="mb-3">
+                            <label for="user" class="form-label">Usuario</label>
+                            <input type="text" class="form-control" id="user" name="user" tabindex="1"
+                                value="<%= user.nombre  %>">
+                        </div>
+                        <div class="mb-3">
+                            <label for="rol" class="form-label">Reserva</label>
+                            <select id="rol" name="rol" class="form-select" tabindex="2">
+                                <option <%=user.rol=='Brasil' ? "selected" : '' %> value="Brasil">Brasil</option>
+                                <option <%=user.rol=='Perú' ? "selected" : '' %> value="Perú">Perú
+                                </option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary" tabindex="5">Guardar</button>
+                        <a href="/" class="btn btn-secondary">Cancelar</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <% } %>
+
+</body>
+
+</html>

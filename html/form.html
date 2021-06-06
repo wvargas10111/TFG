@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/formStyles.css">
+    <title>contacta con coffeemug</title>
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="navbar_container">
+            <a href="../index.html" id="navbar_logo">coffee mug</a>
+        </div>
+
+        </div>
+    </nav>
+
+    <img src="../img/cmw.png" alt="imagen logo" class="logo_img">
+
+    <div>
+        <form id="form" action="" class="form" onsubmit="return validation();">
+            <h2>Contacta con nosotros</h2>
+            <input type="text" id="name" name="Nombre" placeholder="Nombre o Empresa" required>
+            <input type="text" id="mail" name="Correo" placeholder="correo@correo.com" required>
+            <input type="text" id="phone" name="Telefono" placeholder="666777888" required>
+            <textarea name="Mensaje" placeholder="Escriba aqui su mensaje"></textarea>
+            <input type="submit" value="Enviar" class="main_btn" id="boton">
+        </form>
+    </div>
+
+    <a href="mailto:contact.coffeemug@gmail.com" id="sender">mail</a>
+
+
+    <div class="footer_container">
+
+        <section class="social_media">
+
+            <div class="social_media-wrap">
+
+                <img src="../img/cmw.png" alt="">
+
+                <p class="website_rights">© 2021 All rights reserved. All Rights Reserved<br> Made with <i class="fa fa-heart pulse"></i> by <a href="../../index.html">coffee mug</a></p>
+
+                <div class="social_icons">
+
+                    <a href="/" class="social_icon-link" target="_blank"><i class="fab fa-facebook"></i
+          ></a>
+                    <a href="/" class="social_icon-link"><i class="fab fa-instagram"></i
+          ></a>
+                    <a href="/" class="social_icon-link"><i class="fab fa-youtube"></i
+          ></a>
+                    <a href="/" class="social_icon-link"><i class="fab fa-linkedin"></i
+          ></a>
+                    <a href="/" class="social_icon-link"><i class="fab fa-twitter"></i
+          ></a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    <script>
+        const $form = document.querySelector('#form')
+        const $buttonMailto = document.querySelector('#sender')
+
+        $form.addEventListener('submit', handleSubmit)
+
+        function handleSubmit(event) {
+            event.preventDefault()
+            const form = new FormData(this)
+            console.log(form.get('Nombre'))
+            $buttonMailto.setAttribute('href', `mailto:contact.coffeemug@gmail.com?subject=Nombre/Empresa: ${form.get('Nombre')} | Correo: ${form.get('Correo')} | Telefono: ${form.get('Telefono')}&body=${form.get('Mensaje')}`)
+            $buttonMailto.click()
+
+        }
+    </script>
+    <script src="../js/validations.js"></script>
+</body>
+
+</html>

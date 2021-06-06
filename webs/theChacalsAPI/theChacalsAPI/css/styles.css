@@ -1,0 +1,52 @@
+h1{
+    text-align: center;
+    color: black;
+}
+body{
+    background-color: rgb(228, 228, 228);
+}
+
+
+  
+#parrafo{
+    white-space: pre-wrap;
+  }
+
+#formulario, #chiste{
+    background-color: rgb(114, 114, 114);
+    border-radius: 10px;
+  }
+
+  .titulo{
+      font-size: x-large;
+  }
+  .col-md-4{
+      left: 60px;
+  }
+
+
+#chiste{
+    height: 200px;
+}
+
+footer{
+
+    color: rgb(59, 59, 59);
+    font-size: small;
+    text-align: center;
+}
+
+#chiste p{
+    font-size: x-large;
+    color: white;
+    padding-top: 30px;
+    text-align: center;
+}
+
+.card {
+border-color: rgb(59, 59, 59);
+}
+
+#imgcard{
+  border-color:  rgb(59, 59, 59);
+}

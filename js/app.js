@@ -40,7 +40,7 @@ const highlightMenu = () => {
         aboutMenu.classList.remove('highlight');
         contactMenu.classList.remove('highlight');
         return;
-    } else if (window.innerWidth > 960 && scrollPos < 2100) {
+    } else if (window.innerWidth > 960 && scrollPos < 2950) {
         contactMenu.classList.add('highlight');
         homeMenu.classList.remove('highlight');
         aboutMenu.classList.remove('highlight');

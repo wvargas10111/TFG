@@ -1,0 +1,66 @@
+@import url(../css/styles.css);
+body {
+    background: #000000;
+    background: linear-gradient(to right, #161616, #000000);
+}
+
+.logo_img {
+    display: block;
+    margin: auto;
+    width: 150px;
+    height: 150px;
+    margin-top: 45px;
+}
+
+#sender {
+    opacity: 0;
+}
+
+form {
+    width: 450px;
+    margin: auto;
+    background-image: linear-gradient(to right, #d59b72 0%, #fbc7d4 100%);
+    padding: 10px 20px;
+    margin-top: 45px;
+    border-radius: 7px;
+}
+
+h2 {
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+input,
+textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 7px;
+    font-size: 17px;
+    border: none;
+}
+
+textarea {
+    min-height: 100px;
+    max-height: 200px;
+    max-width: 100%;
+}
+
+#boton {
+    background-image: linear-gradient(to right, #fbc7d4 0%, #d59b72 100%);
+    color: #fff;
+    padding: 20px;
+}
+
+#boton:hover {
+    cursor: pointer;
+    color: #904000;
+}
+
+@media (max-width:480px) {
+    form {
+        width: 100%;
+    }
+}
